@@ -1,0 +1,23 @@
+# Include LICENSE and README in source distribution
+include LICENSE
+include README.md
+include pyproject.toml
+
+# Exclude tests and development files from distribution
+exclude tests/*
+exclude tests/**/*
+recursive-exclude tests *
+
+# Exclude development and CI files
+exclude .github/*
+exclude .gitignore
+exclude .cursorignore
+exclude .mypy_cache/*
+exclude .pytest_cache/*
+exclude .ruff_cache/*
+exclude *.egg-info/*
+
+# Exclude build artifacts
+exclude build/*
+exclude dist/*
+exclude *.egg-info/*
