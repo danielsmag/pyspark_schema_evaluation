@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyspark-schema-evaluation"
+version = "0.1.0"
+description = "Tools for managing and validating schema evolution in PySpark data pipelines."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Daniel Smagarinsky" },
+]
+keywords = ["pyspark", "schema", "data-engineering", "data-quality"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Database",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "pydantic>=2.0.0,<3.0.0",
+  "pydantic-settings>=2.0.0,<3.0.0",
+  "pyspark>=3.0.0,<5.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/pyspark_schema_evaluation"
+Repository = "https://github.com/your-org/pyspark_schema_evaluation"
+Issues = "https://github.com/your-org/pyspark_schema_evaluation/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pyspark_schema_evaluation*"]
+
+[tool.setuptools.package-data]
+pyspark_schema_evaluation = ["py.typed"]
